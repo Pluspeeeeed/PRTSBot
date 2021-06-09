@@ -11,7 +11,7 @@ from op import Operator
 
 
 async def main():
-    with open('setting.yml') as s:
+    with open('setting.yaml', encoding='utf-8') as s:
         setting = yaml.load(s, Loader=yaml.BaseLoader)
 
     bot = Bot(setting['username'], setting['password'], setting['api_url'])
@@ -27,11 +27,9 @@ async def main():
 
 
 async def update_op(bot):
-    ask_string = "[[Category:干员]]" \
-                 "|?稀有度" \
-                 "|?干员名" \
-                 "|?干员序号" \
-                 "|limit=250"
+    with open('setting.yaml', encoding='utf-8') as s:
+        setting = yaml.load(s, Loader=yaml.BaseLoader)
+    ask_string = setting['ask_op']
     tasks = [bot.ask(ask_string)]
     results = await asyncio.gather(*tasks)
     op = []
@@ -47,14 +45,9 @@ async def update_op(bot):
 
 
 async def update_gacha(bot):
-    ask_string = "[[分类:标准寻访]][[分类:常驻标准寻访]][[寻访开启时间cn::>>1]]" \
-                 "|?寻访开启时间cn#ISO" \
-                 "|?寻访关闭时间cn#ISO" \
-                 "|?出率提升干员" \
-                 "|?商店兑换干员" \
-                 "|?卡池名" \
-                 "|limit=100" \
-                 "|link=none"
+    with open('setting.yaml', encoding='utf-8') as s:
+        setting = yaml.load(s, Loader=yaml.BaseLoader)
+    ask_string = setting['ask_gacha']
     tasks = [bot.ask(ask_string)]
     results = await asyncio.gather(*tasks)
     gacha = []
