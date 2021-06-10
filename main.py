@@ -1,11 +1,11 @@
 import asyncio
 import time
+from textwrap import dedent
 
 from lxml import html
 import yaml
 
 from aiowikibot import Bot
-from multireplace import *
 from gacha import Gacha
 from op import Operator
 
@@ -17,21 +17,55 @@ async def main():
     bot = Bot(setting['username'], setting['password'], setting['api_url'])
     await bot.login_wiki()
 
-    tasks = [update_op(bot), update_gacha(bot)]
-    results = await asyncio.gather(*tasks)
+    tasks = [update_op(bot), update_gacha(bot), generate_wikitext(bot)]
+    await asyncio.gather(*tasks)
     await bot.close()
+
+
+async def generate_wikitext(bot):
+    print('out')
+    await asyncio.sleep(5)
     with open('gacha.yaml') as g:
         gacha_list = yaml.unsafe_load(g)
-        for gacha in gacha_list:
-            gacha.show()
+    with open('operator.yaml') as op:
+        op_list = yaml.unsafe_load(op)
+    op_index = {}
+    for op in op_list:
+        op_index[op.name] = op.star
+    print('out')
+    for gacha in gacha_list:
+        table = f"""\
+            |-
+            |{gacha_list.index(gacha) + 1}
+            |[[{gacha.filename}|400px|link={gacha.link}]]
+            |{gacha.start_time}~<br/>{gacha.end_time}"""
+        # todo: convert time
+        print(dedent(table))
+        print('|', end='')
+        for op in gacha.shop_op:
+            if op_index[op] == 5:
+                print(f"{{{{干员头像|{op}|shop=1}}}}", end=' ')
+        for op in gacha.pickup_op:
+            if op_index[op] == 5:
+                print(f"{{{{干员头像|{op}}}}}", end=' ')
+        print('\n|', end='')
+        for op in gacha.shop_op:
+            if op_index[op] < 5:
+                print(f"{{{{干员头像|{op}|shop=1}}}}", end=' ')
+        for op in gacha.pickup_op:
+            if op_index[op] < 5:
+                print(f"{{{{干员头像|{op}}}}}", end=' ')
+        print('')
 
 
 async def update_op(bot):
+    print('op')
     with open('setting.yaml', encoding='utf-8') as s:
         setting = yaml.load(s, Loader=yaml.BaseLoader)
     ask_string = setting['ask_op']
     tasks = [bot.ask(ask_string)]
     results = await asyncio.gather(*tasks)
+    print('op')
     op = []
     for result in results[0]['results']:
         for data in result.values():
@@ -42,14 +76,17 @@ async def update_op(bot):
             ))
     with open('operator.yaml', 'w') as f:
         yaml.dump(op, f)
+    print("Operator data updated.")
 
 
 async def update_gacha(bot):
+    print("gacha")
     with open('setting.yaml', encoding='utf-8') as s:
         setting = yaml.load(s, Loader=yaml.BaseLoader)
     ask_string = setting['ask_gacha']
     tasks = [bot.ask(ask_string)]
     results = await asyncio.gather(*tasks)
+    print("gacha")
     gacha = []
     for result in results[0]['results']:
         for file, data in result.items():
@@ -63,6 +100,7 @@ async def update_gacha(bot):
             ))
     with open('gacha.yaml', 'w') as f:
         yaml.dump(gacha, f)
+    print("Gacha data updated.")
 
 
 async def copy_text(bot):
@@ -76,6 +114,7 @@ async def copy_text(bot):
     #     result_file.write(results[0])
     tasks = [bot.write_wiki(title, tree.text_content().rstrip(), 'Edited by bot', bot=True)]
     await asyncio.gather(*tasks)
+
 
 if __name__ == "__main__":
     # asyncio.set_event_loop_policy(None)
