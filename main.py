@@ -16,46 +16,82 @@ async def main():
 
     bot = Bot(setting['username'], setting['password'], setting['api_url'])
     await bot.login_wiki()
-
-    tasks = [update_op(bot), update_gacha(bot), generate_wikitext(bot)]
+    tasks = []
+    # await generate_wikitext(bot)
+    text = await generate_wikitext(bot, range=(0, 18))
+    tasks.append(bot.write_wiki('User:Txrtanzi/sandbox/gacha/2019', text, 'Edited by bot.', bot=True, minor=False))
+    text = await generate_wikitext(bot, range=(18, 44))
+    tasks.append(bot.write_wiki('User:Txrtanzi/sandbox/gacha/2020', text, 'Edited by bot.', bot=True, minor=False))
+    text = await generate_wikitext(bot, range=(44, 55))
+    tasks.append(bot.write_wiki('User:Txrtanzi/sandbox/gacha/2021', text, 'Edited by bot.', bot=True, minor=False))
+    # tasks = [update_op(bot), update_gacha(bot)]
     await asyncio.gather(*tasks)
     await bot.close()
 
 
-async def generate_wikitext(bot):
+async def generate_wikitext(bot, *, range=None):
+    '''Range of gacha to display in list'''
+    gacha_range = range
+    '''String to return'''
+    text = []
     print('out')
-    await asyncio.sleep(5)
+    '''Load gacha and operator data'''
     with open('gacha.yaml') as g:
         gacha_list = yaml.unsafe_load(g)
     with open('operator.yaml') as op:
         op_list = yaml.unsafe_load(op)
+    ''''dump operator name and star into a dict for query'''
     op_index = {}
     for op in op_list:
         op_index[op.name] = op.star
     print('out')
-    for gacha in gacha_list:
-        table = f"""\
+    rotate_title = """\
+        {| class="wikitable mw-collapsible fullline logo" style="width:100%; text-align:center; white-space:normal; display:table;"
+        ! style="width:5%" |序号
+        ! style="width:25%" |寻访页面
+        ! style="width:20%" |开启时间
+        ! style="width:25%" |特定干员（6星）
+        ! style="width:25%" |特定干员（5星）"""
+
+    text.append(dedent(rotate_title))
+    '''process range'''
+    if gacha_range is None:
+        gacha_range = (0, len(gacha_list))
+    elif len(range) == 1:
+        gacha_range = (range, len(gacha_list))
+
+    t_list = gacha_list[gacha_range[0]: gacha_range[1]]
+    t_list.reverse()
+    '''generate table'''
+    for gacha in t_list:
+        time_array = time.localtime(int(gacha.start_time))
+        s_time = time.strftime("%Y-%m-%d %H:%M", time_array)
+        time_array = time.localtime(int(gacha.end_time))
+        e_time = time.strftime("%Y-%m-%d %H:%M", time_array)
+        table = f"""
             |-
             |{gacha_list.index(gacha) + 1}
             |[[{gacha.filename}|400px|link={gacha.link}]]
-            |{gacha.start_time}~<br/>{gacha.end_time}"""
-        # todo: convert time
-        print(dedent(table))
-        print('|', end='')
+            |{s_time}~<br/>{e_time}"""
+        text.append(dedent(table))
+        text.append('\n|')
         for op in gacha.shop_op:
             if op_index[op] == 5:
-                print(f"{{{{干员头像|{op}|shop=1}}}}", end=' ')
+                text.append(f"{{{{干员头像|{op}|shop=1}}}}")
         for op in gacha.pickup_op:
             if op_index[op] == 5:
-                print(f"{{{{干员头像|{op}}}}}", end=' ')
-        print('\n|', end='')
+                text.append(f"{{{{干员头像|{op}}}}}")
+        text.append('\n|')
         for op in gacha.shop_op:
             if op_index[op] < 5:
-                print(f"{{{{干员头像|{op}|shop=1}}}}", end=' ')
+                text.append(f"{{{{干员头像|{op}|shop=1}}}}")
         for op in gacha.pickup_op:
             if op_index[op] < 5:
-                print(f"{{{{干员头像|{op}}}}}", end=' ')
-        print('')
+                text.append(f"{{{{干员头像|{op}}}}}")
+        text.append('')
+    text.append('\n|}')
+    
+    return ''.join(text)
 
 
 async def update_op(bot):

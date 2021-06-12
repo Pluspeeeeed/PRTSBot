@@ -1,20 +1,4 @@
 - !!python/object:op.Operator
-  name: "\u9884\u5907\u5E72\u5458-\u8FD1\u6218"
-  number: -1
-  star: 2
-- !!python/object:op.Operator
-  name: Stormeye
-  number: -1
-  star: 4
-- !!python/object:op.Operator
-  name: "\u9884\u5907\u5E72\u5458-\u72D9\u51FB"
-  number: -1
-  star: 2
-- !!python/object:op.Operator
-  name: Pith
-  number: -1
-  star: 4
-- !!python/object:op.Operator
   name: "\u9884\u5907\u5E72\u5458-\u540E\u52E4"
   number: -1
   star: 2
@@ -28,6 +12,22 @@
   star: 2
 - !!python/object:op.Operator
   name: Sharp
+  number: -1
+  star: 4
+- !!python/object:op.Operator
+  name: "\u9884\u5907\u5E72\u5458-\u8FD1\u6218"
+  number: -1
+  star: 2
+- !!python/object:op.Operator
+  name: Stormeye
+  number: -1
+  star: 4
+- !!python/object:op.Operator
+  name: "\u9884\u5907\u5E72\u5458-\u72D9\u51FB"
+  number: -1
+  star: 2
+- !!python/object:op.Operator
+  name: Pith
   number: -1
   star: 4
 - !!python/object:op.Operator
