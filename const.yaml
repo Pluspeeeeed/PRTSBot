@@ -1,0 +1,43 @@
+ask_rotate_gacha: "[[分类:标准寻访]]
+  [[分类:常驻标准寻访]]
+  [[寻访开启时间cn::>>1]]
+  |?寻访开启时间cn#ISO
+  |?寻访关闭时间cn#ISO
+  |?出率提升干员
+  |?商店兑换干员
+  |?卡池名
+  |limit=100
+  |link=none"
+ask_standard_gacha: "[[分类:标准寻访]]
+  [[分类:限时寻访]]
+  [[寻访开启时间cn::>>1]]
+  |?寻访开启时间cn#ISO
+  |?寻访关闭时间cn#ISO
+  |?出率提升干员
+  |?寻访名cn
+  |?卡池名
+  |?备注1
+  |?备注2
+  |limit=100
+  |link=none
+  |sort=寻访开启时间cn"
+ask_op: "[[分类:干员]]
+  [[干员序号::>1]]
+  |?稀有度
+  |?干员名
+  |?干员序号
+  |limit=250
+  |sort=干员序号"
+rotate_gacha_title: "{|class=\"wikitable mw-collapsible fullline logo\" style=\"width:100%;
+        text-align:center; white-space:normal; display:table;\"\n
+        ! style=\"width:5%\" |序号\n
+        ! style=\"width:25%\" |寻访页面\n
+        ! style=\"width:20%\" |开启时间\n
+        ! style=\"width:25%\" |特定干员（6星）\n
+        ! style=\"width:25%\" |特定干员（5星）"
+standard_gacha_title: "{| class=\"wikitable mw-collapsible fullline logo\" style=\"width:100%;
+        text-align:center; white-space:normal; display:table;\"\n
+        ! style=\"width:30%\" |寻访页面\n
+        ! style=\"width:20%\" |开启时间\n
+        ! style=\"width:25%\" |特定干员（6星）\n
+        ! style=\"width:25%\" |特定干员（5星&4星）"
