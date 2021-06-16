@@ -26,16 +26,16 @@ async def main():
         tasks.clear()
         selection = input('Update or write:')
         if selection == 'update':
-            # tasks.append(update_op(bot))
+            tasks.append(update_op(bot))
             tasks.append(update_gacha(bot))
             try:
                 await asyncio.gather(*tasks)
             except httpx.ReadTimeout:
                 print("Tine Out")
         elif selection == 'write':
-            text = await generate_standard_gacha(bot)
+            text = await generate_special_gacha(bot)
             tasks.append(
-                bot.write_wiki('用户:Txrtanzi/sandbox/gacha/full', text, 'Edited by bot.', bot=True, minor=False))
+                bot.write_wiki('用户:Txrtanzi/sandbox/gacha/special', text, 'Edited by bot.', bot=True, minor=False))
             await asyncio.gather(*tasks)
         elif selection == 'print':
             await print_data()
@@ -67,11 +67,11 @@ async def generate_standard_gacha(bot, *, range=None):
     with open('gacha_standard.yaml') as g:
         gacha_list = yaml.unsafe_load(g)
     with open('operator.yaml') as op:
-        op_list = yaml.unsafe_load(op)
+        op_dict = yaml.unsafe_load(op)
     ''''dump operator name and star into a dict for query'''
-    op_index = {}
-    for op in op_list:
-        op_index[op.name] = op.star
+    # op_dict = {}
+    # for op in op_list:
+    #     op_dict[op.name] = op.star
     print('out')
     rotate_title = const['standard_gacha_title']
 
@@ -97,19 +97,19 @@ async def generate_standard_gacha(bot, *, range=None):
         text.append(dedent(table))
         text.append('\n|')
         for op in gacha.shop_op:
-            if op_index[op] == 5:
+            if op_dict[op]['star'] == 5:
                 text.append(f"{{{{干员头像|{op}|shop=1}}}}")
         for op in gacha.pickup_op:
-            if op_index[op] == 5:
+            if op_dict[op]['star'] == 5:
                 text.append(f"{{{{干员头像|{op}}}}}")
         if gacha.comment1 != "":
             text.append(f"\n※{gacha.comment1}")
         text.append('\n|')
         for op in gacha.shop_op:
-            if op_index[op] < 5:
+            if op_dict[op]['star'] < 5:
                 text.append(f"{{{{干员头像|{op}|shop=1}}}}")
         for op in gacha.pickup_op:
-            if op_index[op] < 5:
+            if op_dict[op]['star'] < 5:
                 text.append(f"{{{{干员头像|{op}}}}}")
         if gacha.comment2 != "":
             text.append(f"\n※{gacha.comment2}")
@@ -120,7 +120,85 @@ async def generate_standard_gacha(bot, *, range=None):
 
 
 async def generate_special_gacha(bot, *, range=None):
-    return None
+    """Generate wikitext for special gacha page"""
+    '''Range of gacha to display in list'''
+    gacha_range = range
+    '''String to return'''
+    text = []
+    print('out')
+    '''Load gacha and operator data'''
+    with open('gacha_special.yaml') as g:
+        gacha_list = yaml.unsafe_load(g)
+    with open('operator.yaml') as op:
+        op_dict = yaml.unsafe_load(op)
+    print('out')
+    rotate_title = const['standard_gacha_title']
+
+    text.append(dedent(rotate_title))
+    '''process range'''
+    if gacha_range is None:
+        gacha_range = (0, len(gacha_list))
+    elif type(range) is int:
+        gacha_range = (range, len(gacha_list))
+    print(gacha_range)
+    t_list = gacha_list[gacha_range[0]: gacha_range[1]]
+    t_list.reverse()
+    '''generate table'''
+    for gacha in t_list:
+        time_array = time.localtime(int(gacha.start_time))
+        s_time = time.strftime("%Y-%m-%d %H:%M", time_array)
+        time_array = time.localtime(int(gacha.end_time))
+        e_time = time.strftime("%Y-%m-%d %H:%M", time_array)
+        time_text = ''
+        if gacha.series == '':
+            table = f"""
+                |-
+                |[[{gacha.filename}|400px|link={gacha.link}]]<br/>[[{gacha.link}|{gacha.name}]]
+                |{s_time}~<br/>{e_time}"""
+        else:
+            table = f"""
+                |-
+                |[[{gacha.filename}|400px|link={gacha.link}]]<br/>[[{gacha.link}|【限定寻访·{gacha.series}】{gacha.name}]]
+                |{s_time}~<br/>{e_time}"""
+        text.append(dedent(table))
+        text.append('\n|')
+        for op in gacha.shop_op:
+            if op_dict[op]['star'] == 5:
+                text.append(f"{{{{干员头像|{op}|shop=1}}}}")
+        for op in gacha.pickup_op:
+            if op_dict[op]['star'] == 5:
+                if op_dict[op]['obtain'] == '限定寻访':
+                    # print(op_dict[op])
+                    # print(gacha.series)
+                    text.append(f"{{{{干员头像|{op}|limited=1}}}}")
+                    if op_dict[op]['limit_time'] != '':
+                        time_array = time.localtime(int(op_dict[op]['limit_time']))
+                        limit_time = time.strftime("%Y-%m-%d", time_array)
+                        time_text = f'''
+                        ※限定干员【{op}】加入【{gacha.series}】系列限定寻访的时间为{limit_time}'''
+                else:
+                    text.append(f"{{{{干员头像|{op}}}}}")
+        text.append(dedent(time_text))
+        if gacha.comment1 != "":
+            text.append(f"\n※{gacha.comment1}")
+        text.append('\n|')
+        for op in gacha.shop_op:
+            if op_dict[op]['star'] < 5:
+                text.append(f"{{{{干员头像|{op}|shop=1}}}}")
+        for op in gacha.pickup_op:
+            if op_dict[op]['star'] < 5:
+                text.append(f"{{{{干员头像|{op}}}}}")
+        if gacha.comment2 != "":
+            text.append(f"\n※{gacha.comment2}")
+        text.append('')
+    text.append('''\n|-\n
+|[[File:专属推荐干员寻访.png|400px|link=寻访模拟/专属推荐干员寻访]]<br>[[寻访模拟/专属推荐干员寻访|专属推荐干员寻访]]\n
+|常驻<br/>（仅可抽取21次，次数用尽即结束）\n
+|{{干员头像|能天使}} {{干员头像|推进之王}} {{干员头像|安洁莉娜}}<br/>{{干员头像|闪灵}} {{干员头像|星熊}} {{干员头像|银灰}}<br/>※寻访池内只有以上6★干员\n
+|部分5★/4★干员\n
+|}''')
+
+    return ''.join(text)
 
 
 async def generate_rotate_gacha(bot, *, range=None):
@@ -134,11 +212,7 @@ async def generate_rotate_gacha(bot, *, range=None):
     with open('gacha_rotate.yaml') as g:
         gacha_list = yaml.unsafe_load(g)
     with open('operator.yaml') as op:
-        op_list = yaml.unsafe_load(op)
-    ''''dump operator name and star into a dict for query'''
-    op_index = {}
-    for op in op_list:
-        op_index[op.name] = op.star
+        op_dict = yaml.load(op, Loader=yaml.BaseLoader)
     print('out')
     rotate_title = const['rotate_gacha_title']
 
@@ -165,17 +239,17 @@ async def generate_rotate_gacha(bot, *, range=None):
         text.append(dedent(table))
         text.append('\n|')
         for op in gacha.shop_op:
-            if op_index[op] == 5:
+            if op_dict[op]['star'] == 5:
                 text.append(f"{{{{干员头像|{op}|shop=1}}}}")
         for op in gacha.pickup_op:
-            if op_index[op] == 5:
+            if op_dict[op]['star'] == 5:
                 text.append(f"{{{{干员头像|{op}}}}}")
         text.append('\n|')
         for op in gacha.shop_op:
-            if op_index[op] < 5:
+            if op_dict[op]['star'] < 5:
                 text.append(f"{{{{干员头像|{op}|shop=1}}}}")
         for op in gacha.pickup_op:
-            if op_index[op] < 5:
+            if op_dict[op]['star'] < 5:
                 text.append(f"{{{{干员头像|{op}}}}}")
         text.append('')
     text.append('\n|}')
@@ -189,14 +263,21 @@ async def update_op(bot):
     tasks = [bot.ask(ask_string)]
     results = await asyncio.gather(*tasks)
     print('op')
-    op = []
+    op = {}
     for result in results[0]['results']:
         for data in result.values():
-            op.append(Operator(
-                data['printouts']['干员名'][0],
-                int(data['printouts']['稀有度'][0]),
-                data['printouts']['干员序号'][0]
-            ))
+            name = data['printouts']['干员名'][0]
+            op[name] = {
+                'star': int(data['printouts']['稀有度'][0]),
+                'number': data['printouts']['干员序号'][0],
+                'obtain': data['printouts']['获得方式'][0]
+            }
+            try:
+                op[name]['limit_time'] = data['printouts']['寻访解限时间'][0]['timestamp']
+            except IndexError:
+                op[name]['limit_time'] = ''
+            else:
+                print('Found limit time')
     with open('operator.yaml', 'w') as op_file:
         yaml.dump(op, op_file)
     print("Operator data updated.")
@@ -204,9 +285,8 @@ async def update_op(bot):
 
 async def update_gacha(bot):
     print("gacha")
-    ask_string = [const['ask_rotate_gacha'], const['ask_standard_gacha']]
-    tasks = [bot.ask(ask_string[0]), bot.ask(ask_string[1])]
-    print(ask_string[1])
+    ask_string = [const['ask_rotate_gacha'], const['ask_standard_gacha'], const['ask_special_gacha']]
+    tasks = [bot.ask(ask_string[0]), bot.ask(ask_string[1]), bot.ask(ask_string[2])]
     results = await asyncio.gather(*tasks)
     print("gacha")
     gacha = []
@@ -222,7 +302,7 @@ async def update_gacha(bot):
             ))
     with open('gacha_rotate.yaml', 'w') as rotate_file:
         yaml.dump(gacha, rotate_file)
-    gacha = []
+    gacha.clear()
     for result in results[1]['results']:
         for file, data in result.items():
             g_result = Gacha(
@@ -248,6 +328,38 @@ async def update_gacha(bot):
             gacha.append(g_result)
     with open('gacha_standard.yaml', 'w') as standard_file:
         yaml.dump(gacha, standard_file)
+    gacha.clear()
+    for result in results[2]['results']:
+        for file, data in result.items():
+            g_result = Gacha(
+                data['printouts']['寻访开启时间cn'][0]['timestamp'],
+                data['printouts']['寻访关闭时间cn'][0]['timestamp'],
+                file,
+                data['printouts']['出率提升干员'],
+                link=data['printouts']['卡池名'][0],
+                name=data['printouts']['寻访名cn'][0],
+            )
+            try:
+                g_result.comment1 = data['printouts']['备注1'][0]
+            except IndexError:
+                pass
+            else:
+                print('Found comment 1')
+            try:
+                g_result.comment2 = data['printouts']['备注2'][0]
+            except IndexError:
+                pass
+            else:
+                print('Found comment 2')
+            try:
+                g_result.series = data['printouts']['限定寻访分类'][0]
+            except IndexError:
+                pass
+            else:
+                print('Found limit series')
+            gacha.append(g_result)
+    with open('gacha_special.yaml', 'w') as special_file:
+        yaml.dump(gacha, special_file)
     print("Gacha data updated.")
 
 

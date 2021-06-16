@@ -21,11 +21,25 @@ ask_standard_gacha: "[[分类:标准寻访]]
   |limit=100
   |link=none
   |sort=寻访开启时间cn"
+ask_special_gacha: "[[分类:限定寻访]] OR [[分类:精英战术专家寻访]]
+  |?寻访开启时间cn#ISO
+  |?寻访关闭时间cn#ISO
+  |?出率提升干员
+  |?寻访名cn
+  |?卡池名
+  |?限定寻访分类
+  |?备注1
+  |?备注2
+  |limit=100
+  |link=none
+  |sort=寻访开启时间cn"
 ask_op: "[[分类:干员]]
   [[干员序号::>1]]
   |?稀有度
   |?干员名
   |?干员序号
+  |?获得方式
+  |?寻访解限时间#ISO
   |limit=250
   |sort=干员序号"
 rotate_gacha_title: "{|class=\"wikitable mw-collapsible fullline logo\" style=\"width:100%;

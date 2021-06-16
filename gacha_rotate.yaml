@@ -9,6 +9,7 @@
   - "\u80FD\u5929\u4F7F"
   - "\u5929\u706B"
   - "\u51DB\u51AC"
+  series: ''
   shop_op:
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u53EF\u9882"
@@ -24,6 +25,7 @@
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u767D\u91D1"
   - "\u8299\u5170\u5361"
+  series: ''
   shop_op:
   - "\u591C\u83BA"
   - "\u5FB7\u514B\u8428\u65AF"
@@ -39,6 +41,7 @@
   - "\u827E\u96C5\u6CD5\u62C9"
   - "\u6885\u5C14"
   - "\u8D6B\u9ED8"
+  series: ''
   shop_op:
   - "\u4F0A\u8299\u5229\u7279"
   - "\u62C9\u666E\u5170\u5FB7"
@@ -54,6 +57,7 @@
   - "\u95EA\u7075"
   - "\u771F\u7406"
   - "\u7EA2"
+  series: ''
   shop_op:
   - "\u585E\u96F7\u5A05"
   - "\u5E7D\u7075\u9CA8"
@@ -69,6 +73,7 @@
   - "\u94F6\u7070"
   - "\u7A7A"
   - "\u767D\u9762\u9E2E"
+  series: ''
   shop_op:
   - "\u591C\u83BA"
   - "\u84DD\u6BD2"
@@ -84,6 +89,7 @@
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u72EE\u874E"
   - "\u5B88\u6797\u4EBA"
+  series: ''
   shop_op:
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u534E\u6CD5\u7433"
@@ -99,6 +105,7 @@
   - "\u827E\u96C5\u6CD5\u62C9"
   - "\u666E\u7F57\u65FA\u65AF"
   - "\u8299\u5170\u5361"
+  series: ''
   shop_op:
   - "\u585E\u96F7\u5A05"
   - "\u7EA2"
@@ -114,6 +121,7 @@
   - "\u80FD\u5929\u4F7F"
   - "\u51DB\u51AC"
   - "\u767D\u91D1"
+  series: ''
   shop_op:
   - "\u4F0A\u8299\u5229\u7279"
   - "\u521D\u96EA"
@@ -129,6 +137,7 @@
   - "\u65AF\u5361\u8482"
   - "\u5D16\u5FC3"
   - "\u4E34\u5149"
+  series: ''
   shop_op:
   - "\u95EA\u7075"
   - "\u5929\u706B"
@@ -144,6 +153,7 @@
   - "\u661F\u718A"
   - "\u62C9\u666E\u5170\u5FB7"
   - "\u7A7A"
+  series: ''
   shop_op:
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u767D\u9762\u9E2E"
@@ -159,6 +169,7 @@
   - "\u80FD\u5929\u4F7F"
   - "\u591C\u9B54"
   - "\u5FB7\u514B\u8428\u65AF"
+  series: ''
   shop_op:
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u5B88\u6797\u4EBA"
@@ -174,6 +185,7 @@
   - "\u4F0A\u8299\u5229\u7279"
   - "\u6885\u5C14"
   - "\u534E\u6CD5\u7433"
+  series: ''
   shop_op:
   - "\u94F6\u7070"
   - "\u96F7\u86C7"
@@ -189,6 +201,7 @@
   - "\u65AF\u5361\u8482"
   - "\u98DF\u94C1\u517D"
   - "\u771F\u7406"
+  series: ''
   shop_op:
   - "\u585E\u96F7\u5A05"
   - "\u9668\u661F"
@@ -204,6 +217,7 @@
   - "\u591C\u83BA"
   - "\u521D\u96EA"
   - "\u62C9\u666E\u5170\u5FB7"
+  series: ''
   shop_op:
   - "\u95EA\u7075"
   - "\u4E34\u5149"
@@ -219,6 +233,7 @@
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u683C\u52B3\u514B\u65AF"
   - "\u84DD\u6BD2"
+  series: ''
   shop_op:
   - "\u661F\u718A"
   - "\u7A7A"
@@ -234,6 +249,7 @@
   - "\u585E\u96F7\u5A05"
   - "\u51DB\u51AC"
   - "\u7EA2"
+  series: ''
   shop_op:
   - "\u4F0A\u8299\u5229\u7279"
   - "\u6885\u5C14"
@@ -249,6 +265,7 @@
   - "\u9ED1"
   - "\u661F\u6781"
   - "\u5D16\u5FC3"
+  series: ''
   shop_op:
   - "\u591C\u83BA"
   - "\u767D\u91D1"
@@ -264,6 +281,7 @@
   - "\u94F6\u7070"
   - "\u521D\u96EA"
   - "\u98DF\u94C1\u517D"
+  series: ''
   shop_op:
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u8299\u5170\u5361"
@@ -279,6 +297,7 @@
   - "\u8D6B\u62C9\u683C"
   - "\u51DB\u51AC"
   - "\u534E\u6CD5\u7433"
+  series: ''
   shop_op:
   - "\u95EA\u7075"
   - "\u72EE\u874E"
@@ -294,6 +313,7 @@
   - "\u9648"
   - "\u96F7\u86C7"
   - "\u5FB7\u514B\u8428\u65AF"
+  series: ''
   shop_op:
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u771F\u7406"
@@ -309,6 +329,7 @@
   - "\u65AF\u5361\u8482"
   - "\u591C\u9B54"
   - "\u8BD7\u6000\u96C5"
+  series: ''
   shop_op:
   - "\u827E\u96C5\u6CD5\u62C9"
   - "\u8D6B\u9ED8"
@@ -324,6 +345,7 @@
   - "\u9EA6\u54F2\u4F26"
   - "\u9001\u846C\u4EBA"
   - "\u767D\u9762\u9E2E"
+  series: ''
   shop_op:
   - "\u661F\u718A"
   - "\u7EA2"
@@ -339,6 +361,7 @@
   - "\u94F6\u7070"
   - "\u82C7\u8349"
   - "\u84DD\u6BD2"
+  series: ''
   shop_op:
   - "\u585E\u96F7\u5A05"
   - "\u5D16\u5FC3"
@@ -354,6 +377,7 @@
   - "\u591C\u83BA"
   - "\u5E03\u6D1B\u5361"
   - "\u6885\u5C14"
+  series: ''
   shop_op:
   - "\u80FD\u5929\u4F7F"
   - "\u666E\u7F57\u65FA\u65AF"
@@ -369,6 +393,7 @@
   - "\u83AB\u65AF\u63D0\u9A6C"
   - "\u5E7D\u7075\u9CA8"
   - "\u69D0\u7425"
+  series: ''
   shop_op:
   - "\u4F0A\u8299\u5229\u7279"
   - "\u98DF\u94C1\u517D"
@@ -384,6 +409,7 @@
   - "\u9648"
   - "\u53EF\u9882"
   - "\u9668\u661F"
+  series: ''
   shop_op:
   - "\u95EA\u7075"
   - "\u51DB\u51AC"
@@ -399,6 +425,7 @@
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u62C9\u666E\u5170\u5FB7"
   - "\u7A7A"
+  series: ''
   shop_op:
   - "\u65AF\u5361\u8482"
   - "\u591C\u9B54"
@@ -414,6 +441,7 @@
   - "\u9ED1"
   - "\u96F7\u86C7"
   - "\u7EA2"
+  series: ''
   shop_op:
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u8BD7\u6000\u96C5"
@@ -429,6 +457,7 @@
   - "\u963F"
   - "\u72EE\u874E"
   - "\u60CA\u86F0"
+  series: ''
   shop_op:
   - "\u827E\u96C5\u6CD5\u62C9"
   - "\u534E\u6CD5\u7433"
@@ -444,6 +473,7 @@
   - "\u9EA6\u54F2\u4F26"
   - "\u771F\u7406"
   - "\u767D\u9762\u9E2E"
+  series: ''
   shop_op:
   - "\u661F\u718A"
   - "\u5FB7\u514B\u8428\u65AF"
@@ -459,6 +489,7 @@
   - "\u80FD\u5929\u4F7F"
   - "\u5E03\u6D1B\u5361"
   - "\u6885\u5C14"
+  series: ''
   shop_op:
   - "\u9648"
   - "\u84DD\u6BD2"
@@ -474,6 +505,7 @@
   - "\u83AB\u65AF\u63D0\u9A6C"
   - "\u8299\u5170\u5361"
   - "\u521D\u96EA"
+  series: ''
   shop_op:
   - "\u591C\u83BA"
   - "\u661F\u6781"
@@ -489,6 +521,7 @@
   - "\u98CE\u7B1B"
   - "\u69D0\u7425"
   - "\u6151\u7802"
+  series: ''
   shop_op:
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u4E34\u5149"
@@ -504,6 +537,7 @@
   - "\u65AF\u5361\u8482"
   - "\u82C7\u8349"
   - "\u5929\u706B"
+  series: ''
   shop_op:
   - "\u9ED1"
   - "\u767D\u91D1"
@@ -519,6 +553,7 @@
   - "\u523B\u4FC4\u67CF"
   - "\u7A7A"
   - "\u5DEB\u604B"
+  series: ''
   shop_op:
   - "\u94F6\u7070"
   - "\u53EF\u9882"
@@ -534,6 +569,7 @@
   - "\u714C"
   - "\u8D6B\u9ED8"
   - "\u5D16\u5FC3"
+  series: ''
   shop_op:
   - "\u95EA\u7075"
   - "\u5E7D\u7075\u9CA8"
@@ -549,6 +585,7 @@
   - "\u4F0A\u8299\u5229\u7279"
   - "\u51DB\u51AC"
   - "\u60CA\u86F0"
+  series: ''
   shop_op:
   - "\u8D6B\u62C9\u683C"
   - "\u96F7\u86C7"
@@ -564,6 +601,7 @@
   - "\u6E29\u8482"
   - "\u62C9\u666E\u5170\u5FB7"
   - "\u9001\u846C\u4EBA"
+  series: ''
   shop_op:
   - "\u585E\u96F7\u5A05"
   - "\u98DF\u94C1\u517D"
@@ -579,6 +617,7 @@
   - "\u5080\u5F71"
   - "\u6885\u5C14"
   - "\u72EE\u874E"
+  series: ''
   shop_op:
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u683C\u52B3\u514B\u65AF"
@@ -594,6 +633,7 @@
   - "\u827E\u96C5\u6CD5\u62C9"
   - "\u8BD7\u6000\u96C5"
   - "\u543D"
+  series: ''
   shop_op:
   - "\u9EA6\u54F2\u4F26"
   - "\u7070\u5589"
@@ -609,6 +649,7 @@
   - "\u65E9\u9732"
   - "\u767D\u9762\u9E2E"
   - "\u6708\u79BE"
+  series: ''
   shop_op:
   - "\u591C\u83BA"
   - "\u7EA2"
@@ -624,6 +665,7 @@
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u5FB7\u514B\u8428\u65AF"
   - "\u65AD\u5D16"
+  series: ''
   shop_op:
   - "\u80FD\u5929\u4F7F"
   - "\u521D\u96EA"
@@ -639,6 +681,7 @@
   - "\u94C3\u5170"
   - "\u83B1\u6069\u54C8\u7279"
   - "\u6151\u7802"
+  series: ''
   shop_op:
   - "\u714C"
   - "\u82C7\u8349"
@@ -654,6 +697,7 @@
   - "\u585E\u96F7\u5A05"
   - "\u767D\u91D1"
   - "\u6781\u5883"
+  series: ''
   shop_op:
   - "\u65AF\u5361\u8482"
   - "\u8299\u5170\u5361"
@@ -669,6 +713,7 @@
   - "\u95EA\u7075"
   - "\u5B89\u54F2\u62C9"
   - "\u871C\u8721"
+  series: ''
   shop_op:
   - "\u94F6\u7070"
   - "\u5929\u706B"
@@ -684,6 +729,7 @@
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u4E34\u5149"
   - "\u71E7\u77F3"
+  series: ''
   shop_op:
   - "\u9648"
   - "\u53EF\u9882"
@@ -699,6 +745,7 @@
   - "\u68D8\u523A"
   - "\u6885\u5C14"
   - "\u56DB\u6708"
+  series: ''
   shop_op:
   - "\u83AB\u65AF\u63D0\u9A6C"
   - "\u7A7A"
@@ -714,6 +761,7 @@
   - "\u68EE\u86BA"
   - "\u5E7D\u7075\u9CA8"
   - "\u98DF\u94C1\u517D"
+  series: ''
   shop_op:
   - "\u4F0A\u8299\u5229\u7279"
   - "\u60CA\u86F0"
@@ -729,6 +777,7 @@
   - "\u53F2\u5C14\u7279\u5C14"
   - "\u5D16\u5FC3"
   - "\u5965\u65AF\u5854"
+  series: ''
   shop_op:
   - "\u9ED1"
   - "\u96F7\u86C7"
@@ -744,6 +793,7 @@
   - "\u5B89\u6D01\u8389\u5A1C"
   - "\u666E\u7F57\u65FA\u65AF"
   - "\u7D6E\u96E8"
+  series: ''
   shop_op:
   - "\u523B\u4FC4\u67CF"
   - "\u62C9\u666E\u5170\u5FB7"
@@ -759,6 +809,7 @@
   - "\u7455\u5149"
   - "\u72EE\u874E"
   - "\u683C\u52B3\u514B\u65AF"
+  series: ''
   shop_op:
   - "\u661F\u718A"
   - "\u51DB\u51AC"
@@ -774,6 +825,7 @@
   - "\u6CE5\u5CA9"
   - "\u5361\u592B\u5361"
   - "\u7070\u5589"
+  series: ''
   shop_op:
   - "\u8D6B\u62C9\u683C"
   - "\u9001\u846C\u4EBA"
@@ -789,6 +841,7 @@
   - "\u5C71"
   - "\u71E7\u77F3"
   - "\u77F3\u68C9"
+  series: ''
   shop_op:
   - "\u714C"
   - "\u5E03\u6D1B\u5361"
@@ -804,6 +857,7 @@
   - "\u68EE\u86BA"
   - "\u767D\u9762\u9E2E"
   - "\u84DD\u6BD2"
+  series: ''
   shop_op:
   - "\u963F"
   - "\u771F\u7406"
@@ -819,6 +873,7 @@
   - "\u53F2\u5C14\u7279\u5C14"
   - "\u51DB\u51AC"
   - "\u534E\u6CD5\u7433"
+  series: ''
   shop_op:
   - "\u827E\u96C5\u6CD5\u62C9"
   - "\u69D0\u7425"
@@ -834,6 +889,7 @@
   - "\u83AB\u65AF\u63D0\u9A6C"
   - "\u8BD7\u6000\u96C5"
   - "\u7231\u4E3D\u4E1D"
+  series: ''
   shop_op:
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u661F\u6781"

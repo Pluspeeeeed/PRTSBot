@@ -3,7 +3,7 @@ from op import Operator
 
 class Gacha:
     def __init__(self, start_time, end_time, filename, pickup_op, *, shop_op=None, link=None, name=None, comment1=None,
-                 comment2=None):
+                 comment2=None, series=None):
         if shop_op is None:
             shop_op = []
         if link is None:
@@ -14,6 +14,8 @@ class Gacha:
             comment1 = ""
         if comment2 is None:
             comment2 = ""
+        if series is None:
+            series = ""
         self.start_time = start_time
         self.end_time = end_time
         self.filename = filename
@@ -23,6 +25,7 @@ class Gacha:
         self.name = name
         self.comment1 = comment1
         self.comment2 = comment2
+        self.series = series
 
         for op in shop_op:
             pickup_op.remove(op)
