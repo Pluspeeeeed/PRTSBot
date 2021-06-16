@@ -8,12 +8,12 @@ from aiowikibot import Bot
 
 from gacha import Gacha
 
-with open('const.yaml', encoding='utf-8') as f:
+with open('data/const.yaml', encoding='utf-8') as f:
     const = yaml.load(f, Loader=yaml.BaseLoader)
 
 
 async def main():
-    with open('setting.yaml', encoding='utf-8') as s:
+    with open('data/setting.yaml', encoding='utf-8') as s:
         setting = yaml.load(s, Loader=yaml.BaseLoader)
 
     bot = Bot(setting['username'], setting['password'], setting['api_url'])
@@ -48,23 +48,7 @@ async def main():
             tasks.append(
                 bot.write_wiki('用户:Txrtanzi/卡池一览/常驻标准寻访', text, 'Edited by bot.', bot=True, minor=False))
             await asyncio.gather(*tasks)
-        elif selection == 'print':
-            await print_data()
     await bot.close()
-
-
-async def print_data():
-    gacha = input("rotate or standard:")
-    if gacha == 'rotate':
-        with open('gacha_rotate.yaml') as g:
-            gacha_list = yaml.unsafe_load(g)
-            for gacha in gacha_list:
-                gacha.show()
-    elif gacha == 'standard':
-        with open('gacha_standard.yaml') as g:
-            gacha_list = yaml.unsafe_load(g)
-            for gacha in gacha_list:
-                gacha.show()
 
 
 async def generate_gacha(*, range=None, category='standard'):
@@ -75,9 +59,9 @@ async def generate_gacha(*, range=None, category='standard'):
     text = []
     print('out')
     '''Load gacha and operator data'''
-    with open('gacha.yaml') as g:
+    with open('data/gacha.yaml') as g:
         full_list = yaml.unsafe_load(g)
-    with open('operator.yaml') as op:
+    with open('data/operator.yaml') as op:
         op_dict = yaml.unsafe_load(op)
     print('out')
 
@@ -190,7 +174,7 @@ async def update_op(bot):
                 op[name]['limit_time'] = ''
             else:
                 print('Found limit time')
-    with open('operator.yaml', 'w') as op_file:
+    with open('data/operator.yaml', 'w') as op_file:
         yaml.dump(op, op_file)
     print("Operator data updated.")
 
@@ -273,7 +257,7 @@ async def update_gacha(bot):
                 print('Found limit series')
             gacha.append(g_result)
             gacha.sort(key=lambda t_gacha: t_gacha.start_time)
-    with open('gacha.yaml', 'w') as gacha_file:
+    with open('data/gacha.yaml', 'w') as gacha_file:
         yaml.dump(gacha, gacha_file)
     print("Gacha data updated.")
 
