@@ -161,7 +161,10 @@ async def generate_gacha(*, range=None, category='standard'):
         if gacha.comment2 != "":
             text.append(f"\n※{gacha.comment2}")
         text.append('')
-    text.append('''\n|}''')
+    if category == 'special':
+        text.append(const['startup_gacha_table'])
+    else:
+        text.append("\n|}")
 
     return ''.join(text)
 

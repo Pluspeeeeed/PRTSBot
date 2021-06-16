@@ -75,3 +75,9 @@ gacha_header: "__TOC__\n
 {{cbox2|lv=1|icon=server|text=点此查看[[卡池一览/国际服|海外服务器的寻访列表]]。}}\n
 {{cbox2|lv=1|icon=server|text=点此查看[[卡池一览/繁中服|繁体中文服的寻访列表]]。}}\n==限时寻访==\n"
 seo_text: "\n{{#seo:\n|title=PRTS - 玩家自由构筑的明日方舟中文Wiki\n|titlemode=append\n|keywords=PRTS,明日方舟,Mooncell,Arknights,明日方舟wiki,明日方舟百科,明日方舟攻略,明日方舟图鉴,明日方舟,明日方舟资料站\n|description=PRTS是一个非盈利性质的明日方舟资料Wiki网站\n}}"
+startup_gacha_table: "\n|-\n
+|[[File:专属推荐干员寻访.png|400px|link=寻访模拟/专属推荐干员寻访]]<br>[[寻访模拟/专属推荐干员寻访|专属推荐干员寻访]]\n
+|常驻<br/>（仅可抽取21次，次数用尽即结束）\n
+|{{干员头像|能天使}} {{干员头像|推进之王}} {{干员头像|安洁莉娜}}<br/>{{干员头像|闪灵}} {{干员头像|星熊}} {{干员头像|银灰}}<br/>※寻访池内只有以上6★干员\n
+|部分5★/4★干员\n
+|}"
