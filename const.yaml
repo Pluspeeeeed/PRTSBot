@@ -8,8 +8,7 @@ ask_rotate_gacha: "[[分类:标准寻访]]
   |?卡池名
   |limit=100
   |link=none"
-ask_standard_gacha: "[[分类:标准寻访]]
-  [[分类:限时寻访]]
+ask_standard_gacha: "[[分类:限时寻访]]
   [[寻访开启时间cn::>>1]]
   |?寻访开启时间cn#ISO
   |?寻访关闭时间cn#ISO
