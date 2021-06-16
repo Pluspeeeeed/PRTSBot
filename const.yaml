@@ -33,6 +33,18 @@ ask_special_gacha: "[[分类:限定寻访]] OR [[分类:精英战术专家寻访
   |limit=100
   |link=none
   |sort=寻访开启时间cn"
+ask_standard_and_special_gacha: "[[分类:限时寻访]] OR [[分类:限定寻访]] OR [[分类:精英战术专家寻访]]
+  |?寻访开启时间cn#ISO
+  |?寻访关闭时间cn#ISO
+  |?出率提升干员
+  |?寻访名cn
+  |?卡池名
+  |?限定寻访分类
+  |?备注1
+  |?备注2
+  |limit=200
+  |link=none
+  |sort=寻访开启时间cn"
 ask_op: "[[分类:干员]]
   [[干员序号::>1]]
   |?稀有度
@@ -43,15 +55,23 @@ ask_op: "[[分类:干员]]
   |limit=250
   |sort=干员序号"
 rotate_gacha_title: "{|class=\"wikitable mw-collapsible fullline logo\" style=\"width:100%;
-        text-align:center; white-space:normal; display:table;\"\n
-        ! style=\"width:5%\" |序号\n
-        ! style=\"width:25%\" |寻访页面\n
-        ! style=\"width:20%\" |开启时间\n
-        ! style=\"width:25%\" |特定干员（6星）\n
-        ! style=\"width:25%\" |特定干员（5星）"
+text-align:center; white-space:normal; display:table;\"\n
+! style=\"width:5%\" |序号\n
+! style=\"width:25%\" |寻访页面\n
+! style=\"width:20%\" |开启时间\n
+! style=\"width:25%\" |特定干员（6星）\n
+! style=\"width:25%\" |特定干员（5星）"
 standard_gacha_title: "{| class=\"wikitable mw-collapsible fullline logo\" style=\"width:100%;
-        text-align:center; white-space:normal; display:table;\"\n
-        ! style=\"width:30%\" |寻访页面\n
-        ! style=\"width:20%\" |开启时间\n
-        ! style=\"width:25%\" |特定干员（6星）\n
-        ! style=\"width:25%\" |特定干员（5星&4星）"
+text-align:center; white-space:normal; display:table;\"\n
+! style=\"width:30%\" |寻访页面\n
+! style=\"width:20%\" |开启时间\n
+! style=\"width:25%\" |特定干员（6星）\n
+! style=\"width:25%\" |特定干员（5星&4星）"
+gacha_header: "__TOC__\n
+{{Ads|normal}}{{Ads/mobile}}\n
+{{cbox2|lv=0|icon=calendar-check|iconclass=r|title=本页面仅记录本年度寻访，点击寻访名或图片可以模拟寻访。}}\n
+{{cbox2|lv=1|icon=chart-bar|title=数据统计|text=点此查看[[卡池一览/寻访概率提升|干员寻访概率提升记录]]。}}\n
+{{cbox2|lv=1|icon=layer-group|title=完整寻访列表|text=点此查看[[卡池一览/限时寻访|限时寻访]]、[[卡池一览/常驻标准寻访|常驻标准寻访]]的完整列表。}}\n
+{{cbox2|lv=1|icon=server|text=点此查看[[卡池一览/国际服|海外服务器的寻访列表]]。}}\n
+{{cbox2|lv=1|icon=server|text=点此查看[[卡池一览/繁中服|繁体中文服的寻访列表]]。}}\n==限时寻访==\n"
+seo_text: "\n{{#seo:\n|title=PRTS - 玩家自由构筑的明日方舟中文Wiki\n|titlemode=append\n|keywords=PRTS,明日方舟,Mooncell,Arknights,明日方舟wiki,明日方舟百科,明日方舟攻略,明日方舟图鉴,明日方舟,明日方舟资料站\n|description=PRTS是一个非盈利性质的明日方舟资料Wiki网站\n}}"
