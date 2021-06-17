@@ -31,27 +31,34 @@ async def main():
             except httpx.ReadTimeout:
                 print("Time Out")
         elif selection == 'write':
-            '''卡池一览/限时寻访'''
-            text = ['==非标准寻访==\n', await generate_gacha(category='special'),
-                    '\n==标准寻访==\n', await generate_gacha()]
-            page_text = ''.join(text)
-            tasks.append(
-                bot.write_wiki('用户:Txrtanzi/卡池一览/限时寻访', page_text, 'Edited by bot.', bot=True, minor=False))
-            '''卡池一览'''
-            text = [const['gacha_header'], await generate_gacha(range=33, category='overview'),
-                    '\n==常驻标准寻访==\n', await generate_gacha(range=44, category='rotate'), const['seo_text']]
-            page_text = ''.join(text)
-            tasks.append(
-                bot.write_wiki('用户:Txrtanzi/卡池一览', page_text, 'Edited by bot.', bot=True, minor=False))
-            '''卡池一览/常驻标准寻访'''
-            text = await generate_gacha(category='rotate')
-            tasks.append(
-                bot.write_wiki('用户:Txrtanzi/卡池一览/常驻标准寻访', text, 'Edited by bot.', bot=True, minor=False))
+            tasks += await write_gacha_page(bot)
             await asyncio.gather(*tasks)
     await bot.close()
 
 
-async def generate_gacha(*, range=None, category='standard'):
+async def write_gacha_page(bot):
+    """generate write task"""
+    tasks = []
+    '''卡池一览/限时寻访'''
+    text = ['==非标准寻访==\n', await generate_gacha_table(category='special'),
+            '\n==标准寻访==\n', await generate_gacha_table()]
+    page_text = ''.join(text)
+    tasks.append(
+        bot.write_wiki('卡池一览/限时寻访', page_text, 'Edited by bot.', bot=True, minor=False))
+    '''卡池一览'''
+    text = [const['gacha_header'], await generate_gacha_table(range=33, category='overview'),
+            '\n==常驻标准寻访==\n', await generate_gacha_table(range=44, category='rotate'), const['seo_text']]
+    page_text = ''.join(text)
+    tasks.append(
+        bot.write_wiki('卡池一览', page_text, 'Edited by bot.', bot=True, minor=False))
+    '''卡池一览/常驻标准寻访'''
+    text = await generate_gacha_table(range=44, category='rotate')
+    tasks.append(
+        bot.write_wiki('卡池一览/常驻标准寻访/2021', text, 'Edited by bot.', bot=True, minor=False))
+    return tasks
+
+
+async def generate_gacha_table(*, range=None, category='standard'):
     """Generate wikitext for gacha overview page"""
     '''Range of gacha to display in list'''
     gacha_range = range
@@ -100,11 +107,12 @@ async def generate_gacha(*, range=None, category='standard'):
         text.append(f"\n|-")
         if category == 'rotate':
             text.append(f"\n|{gacha_list.index(gacha) + 1}")
-        text.append(f"\n|[[{gacha.filename}|400px|link={gacha.link}]]<br/>")
-        if gacha.series == '':
-            text.append(f"[[{gacha.link} | {gacha.name}]]")
-        else:
-            text.append(f"[[{gacha.link}|【限定寻访·{gacha.series}】{gacha.name}]]")
+        text.append(f"\n|[[{gacha.filename}|400px|link={gacha.link}]]")
+        if category != 'rotate':
+            if gacha.series == '':
+                text.append(f"<br/>[[{gacha.link}|{gacha.name}]]")
+            else:
+                text.append(f"<br/>[[{gacha.link}|【限定寻访·{gacha.series}】{gacha.name}]]")
         text.append(f"\n|{s_time}~<br/>{e_time}\n|")
 
         for op in gacha.shop_op:

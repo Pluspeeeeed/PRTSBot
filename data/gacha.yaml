@@ -1652,3 +1652,19 @@
   - "\u63A8\u8FDB\u4E4B\u738B"
   - "\u661F\u6781"
   start_time: '1623268800'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1625083140'
+  filename: "\u6587\u4EF6:\u541B\u5F71\u8F7B\u7075 \u590D\u523B.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u541B\u5F71\u8F7B\u7075 \u590D\u523B"
+  name: "\u541B\u5F71\u8F7B\u7075 \u590D\u523B"
+  pickup_op:
+  - "\u94C3\u5170"
+  - "\u65AD\u5D16"
+  - "\u591C\u9B54"
+  - "\u5361\u8FBE"
+  series: ''
+  shop_op: []
+  start_time: '1623916800'
