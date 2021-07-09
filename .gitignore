@@ -122,7 +122,6 @@ pip-selfcheck.json
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,venv
 
 *.txt
-data/setting.yaml
 aiowikibot
 /.idea/encodings.xml
 /.idea/misc.xml
@@ -132,3 +131,4 @@ aiowikibot
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/modules.xml
 /.idea/.gitignore
+data
