@@ -217,10 +217,18 @@ async def update_gacha(bot):
                 data['printouts']['寻访开启时间cn'][0]['timestamp'],
                 data['printouts']['寻访关闭时间cn'][0]['timestamp'],
                 file,
-                data['printouts']['出率提升干员'],
-                link=data['printouts']['卡池名'][0],
-                name=data['printouts']['寻访名cn'][0],
+                data['printouts']['出率提升干员']
             )
+            try:
+                g_result.link = data['printouts']['卡池名'][0]
+            except IndexError:
+                g_result.link = ""
+                print('Simulator not found')
+            try:
+                g_result.name = data['printouts']['寻访名cn'][0]
+            except IndexError:
+                g_result.name = ""
+                print('Name not found')
             try:
                 g_result.comment1 = data['printouts']['备注1'][0]
             except IndexError:
