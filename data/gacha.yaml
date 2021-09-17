@@ -1668,3 +1668,202 @@
   series: ''
   shop_op: []
   start_time: '1623916800'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1625687940'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6057.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6057"
+  name: ''
+  pickup_op:
+  - "\u7A7A\u5F26"
+  - "\u6708\u79BE"
+  - "\u871C\u8721"
+  series: ''
+  shop_op:
+  - "\u98CE\u7B1B"
+  - "\u521D\u96EA"
+  start_time: '1624478400'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1626379140'
+  filename: "\u6587\u4EF6:\u4ECE\u661F\u706B\u4E2D\u6765.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u4ECE\u661F\u706B\u4E2D\u6765"
+  name: "\u4ECE\u661F\u706B\u4E2D\u6765"
+  pickup_op:
+  - "\u5E15\u62C9\u65AF"
+  - "\u5E7D\u7075\u9CA8"
+  - "\u7EA2"
+  series: ''
+  shop_op: []
+  start_time: '1625212800'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1626897540'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6058.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6058"
+  name: ''
+  pickup_op:
+  - "\u5D6F\u5CE8"
+  - "\u98DF\u94C1\u517D"
+  - "\u56DB\u6708"
+  series: ''
+  shop_op:
+  - "\u585E\u96F7\u5A05"
+  - "\u7070\u5589"
+  start_time: '1625688000'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1627934340'
+  filename: "\u6587\u4EF6:\u71C3\u94A2\u4E4B\u5FC3 \u66B4\u8E81\u94C1\u76AE \u590D\
+    \u523B.jpeg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u71C3\u94A2\u4E4B\u5FC3 \u66B4\u8E81\u94C1\u76AE\
+    \ \u590D\u523B"
+  name: "\u71C3\u94A2\u4E4B\u5FC3:\u66B4\u8E81\u94C1\u76AE \u590D\u523B"
+  pickup_op:
+  - "\u68EE\u86BA"
+  - "\u71E7\u77F3"
+  - "\u9668\u661F"
+  - "\u9178\u7CD6"
+  series: ''
+  shop_op: []
+  start_time: '1626768000'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1628107140'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6059.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6059"
+  name: ''
+  pickup_op:
+  - "\u65E9\u9732"
+  - "\u666E\u7F57\u65FA\u65AF"
+  - "\u4E4C\u6709"
+  series: ''
+  shop_op:
+  - "\u5B89\u6D01\u8389\u5A1C"
+  - "\u6885\u5C14"
+  start_time: '1626897600'
+- !!python/object:gacha.Gacha
+  category: special
+  comment1: ''
+  comment2: ''
+  end_time: '1629143940'
+  filename: "\u6587\u4EF6:\u76DB\u590F\u65B0\u661F.jpg"
+  link: "\u76DB\u590F\u65B0\u661F"
+  name: "\u76DB\u590F\u65B0\u661F"
+  pickup_op:
+  - "\u5047\u65E5\u5A01\u9F99\u9648"
+  - "\u6C34\u6708"
+  - "\u7FBD\u6BDB\u7B14"
+  series: "\u590F\u5B63"
+  shop_op: []
+  start_time: '1627977600'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1629316740'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6060.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6060"
+  name: ''
+  pickup_op:
+  - "\u6CE5\u5CA9"
+  - "\u82C7\u8349"
+  - "\u8D3E\u7EF4"
+  series: ''
+  shop_op:
+  - "\u5080\u5F71"
+  - "\u543D"
+  start_time: '1628107200'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1630526340'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6061.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6061"
+  name: ''
+  pickup_op:
+  - "\u5F02\u5BA2"
+  - "\u5361\u592B\u5361"
+  - "\u5929\u706B"
+  series: ''
+  shop_op:
+  - "\u95EA\u7075"
+  - "\u5B88\u6797\u4EBA"
+  start_time: '1629316800'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1631131140'
+  filename: "\u6587\u4EF6:\u4E0D\u7F81\u9006\u6D41 \u590D\u523B.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u4E0D\u7F81\u9006\u6D41 \u590D\u523B"
+  name: "\u4E0D\u7F81\u9006\u6D41 \u590D\u523B"
+  pickup_op:
+  - "\u68D8\u523A"
+  - "\u5B89\u54F2\u62C9"
+  - "\u666E\u7F57\u65FA\u65AF"
+  - "\u5B51"
+  series: ''
+  shop_op: []
+  start_time: '1629964800'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1631735940'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6062.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6062"
+  name: ''
+  pickup_op:
+  - "\u523B\u4FC4\u67CF"
+  - "\u7D6E\u96E8"
+  - "\u7194\u6CC9"
+  series: ''
+  shop_op:
+  - "\u9EA6\u54F2\u4F26"
+  - "\u6151\u7802"
+  start_time: '1630526400'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1632945540'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6063.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6063"
+  name: ''
+  pickup_op:
+  - "\u7A7A\u5F26"
+  - "\u62C9\u666E\u5170\u5FB7"
+  - "\u7A7A"
+  series: ''
+  shop_op:
+  - "\u6E29\u8482"
+  - "\u683C\u52B3\u514B\u65AF"
+  start_time: '1631736000'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1633031940'
+  filename: "\u6587\u4EF6:\u5C0F\u4E18\u4E0A\u7684\u7720\u67F3.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5C0F\u4E18\u4E0A\u7684\u7720\u67F3"
+  name: "\u5C0F\u4E18\u4E0A\u7684\u7720\u67F3"
+  pickup_op:
+  - "\u7434\u67F3"
+  - "\u6851\u845A"
+  - "\u96F7\u86C7"
+  - "\u7F57\u6BD4\u83C8\u5854"
+  series: ''
+  shop_op: []
+  start_time: '1631865600'
