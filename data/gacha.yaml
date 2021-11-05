@@ -1867,3 +1867,100 @@
   series: ''
   shop_op: []
   start_time: '1631865600'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1634155140'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6064.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6064"
+  name: ''
+  pickup_op:
+  - "\u51EF\u5C14\u5E0C"
+  - "\u60CA\u86F0"
+  - "\u9001\u846C\u4EBA"
+  series: ''
+  shop_op:
+  - "\u80FD\u5929\u4F7F"
+  - "\u5DEB\u604B"
+  start_time: '1632945600'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1634241540'
+  filename: "\u6587\u4EF6:\u7455\u5149\u5FAE\u660E \u590D\u523B.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u7455\u5149\u5FAE\u660E \u590D\u523B"
+  name: "\u7455\u5149\u5FAE\u660E \u590D\u523B"
+  pickup_op:
+  - "\u7455\u5149"
+  - "\u5965\u65AF\u5854"
+  - "\u767D\u91D1"
+  - "\u6CE1\u6CE1"
+  series: ''
+  shop_op: []
+  start_time: '1633075200'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1635364740'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6065.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6065"
+  name: ''
+  pickup_op:
+  - "\u4F0A\u8299\u5229\u7279"
+  - "\u8D64\u51AC"
+  - "\u83B1\u6069\u54C8\u7279"
+  series: ''
+  shop_op:
+  - "\u65AF\u5361\u8482"
+  - "\u767D\u9762\u9E2E"
+  start_time: '1634155200'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1635451140'
+  filename: "\u6587\u4EF6:\u6F02\u6CCA\u4E8E\u98CE.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u6F02\u6CCA\u4E8E\u98CE"
+  name: "\u6F02\u6CCA\u4E8E\u98CE"
+  pickup_op:
+  - "\u8FDC\u7259"
+  - "\u7070\u6BEB"
+  - "\u72EE\u874E"
+  series: ''
+  shop_op: []
+  start_time: '1634284800'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1636574340'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6066.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6066"
+  name: ''
+  pickup_op:
+  - "\u9648"
+  - "\u5E03\u6D1B\u5361"
+  - "\u53EF\u9882"
+  series: ''
+  shop_op:
+  - "\u65E9\u9732"
+  - "\u6781\u5883"
+  start_time: '1635364800'
+- !!python/object:gacha.Gacha
+  category: special
+  comment1: ''
+  comment2: ''
+  end_time: '1636919940'
+  filename: "\u6587\u4EF6:\u5FAA\u5149\u9053\u9014.jpg"
+  link: "\u5FAA\u5149\u9053\u9014"
+  name: "\u5FAA\u5149\u9053\u9014"
+  pickup_op:
+  - "\u8000\u9A91\u58EB\u4E34\u5149"
+  - "\u7130\u5C3E"
+  - "\u8680\u6E05"
+  series: "\u5E86\u5178"
+  shop_op: []
+  start_time: '1635753600'

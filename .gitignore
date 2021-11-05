@@ -37,14 +37,5 @@ pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/venv,visualstudiocode
 
-*.txt
-aiowikibot
-/.idea/encodings.xml
-/.idea/misc.xml
-/.idea/vcs.xml
-/.idea/PRTSBot.iml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/modules.xml
-/.idea/.gitignore
-data
+data/setting.yaml
+__pycache__
