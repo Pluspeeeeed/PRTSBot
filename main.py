@@ -279,8 +279,7 @@ async def update_gacha(bot):
 
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
     start = time.perf_counter()
-    loop.run_until_complete(main())
+    asyncio.run(main())
     end = time.perf_counter()
     print(f"用时{end - start}s")
