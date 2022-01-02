@@ -2009,7 +2009,7 @@
   comment2: ''
   end_time: '1638993540'
   filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6068.jpg"
-  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6067"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6068"
   name: ''
   pickup_op:
   - "\u8D6B\u62C9\u683C"
@@ -2020,3 +2020,68 @@
   - "\u591C\u83BA"
   - "\u77F3\u68C9"
   start_time: '1637784000'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1640030340'
+  filename: "\u6587\u4EF6:\u81EA\u7531\u7684\u56DA\u5F92 \u590D\u523B.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u81EA\u7531\u7684\u56DA\u5F92 \u590D\u523B"
+  name: "\u81EA\u7531\u7684\u56DA\u5F92 \u590D\u523B"
+  pickup_op:
+  - "\u5C71"
+  - "\u5361\u592B\u5361"
+  - "\u8D6B\u9ED8"
+  - "\u677E\u679C"
+  series: ''
+  shop_op: []
+  start_time: '1638864000'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1640203140'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6069.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6069"
+  name: ''
+  pickup_op:
+  - "\u5E15\u62C9\u65AF"
+  - "\u8299\u5170\u5361"
+  - "\u591C\u9B54"
+  series: ''
+  shop_op:
+  - "\u94C3\u5170"
+  - "\u4E34\u5149"
+  start_time: '1638993600'
+- !!python/object:gacha.Gacha
+  category: standard
+  comment1: ''
+  comment2: ''
+  end_time: '1641239940'
+  filename: "\u6587\u4EF6:\u96EA\u878D\u4E4B\u8BFA.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u96EA\u878D\u4E4B\u8BFA"
+  name: "\u96EA\u878D\u4E4B\u8BFA"
+  pickup_op:
+  - "\u7075\u77E5"
+  - "\u6781\u5149"
+  - "\u521D\u96EA"
+  series: ''
+  shop_op: []
+  start_time: '1640073600'
+- !!python/object:gacha.Gacha
+  category: rotate
+  comment1: ''
+  comment2: ''
+  end_time: '1641412740'
+  filename: "\u6587\u4EF6:\u5E72\u5458\u8F6E\u6362\u5361\u6C6070.jpg"
+  link: "\u5BFB\u8BBF\u6A21\u62DF/\u5E72\u5458\u8F6E\u6362\u5361\u6C6070"
+  name: ''
+  pickup_op:
+  - "\u94F6\u7070"
+  - "\u7070\u5589"
+  - "\u661F\u6781"
+  series: ''
+  shop_op:
+  - "\u83AB\u65AF\u63D0\u9A6C"
+  - "\u6708\u79BE"
+  start_time: '1640203200'
